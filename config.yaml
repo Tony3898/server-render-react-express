@@ -1,0 +1,16 @@
+dev: true
+project_name: 'users module test'
+
+mongo_db:
+  url: 'mongodb://localhost:27017'
+  db: usersMod
+
+connection:
+  port: 5001
+  host: localhost
+
+auth:
+  google:
+    clientID: '441844352436-41a711g94m8bqbaolgmdkn72gqdeiguo.apps.googleusercontent.com'
+    clientSecret: '33JoRYB_hx39MjNPObxU5Cwo'
+    callbackURL: 'http://localhost:5001/auth/google/callback'

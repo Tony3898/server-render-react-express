@@ -1,0 +1,55 @@
+{
+  "name": "@tony3898/server-render-react-express",
+  "version": "1.0.0",
+  "description": "server-render-react-express",
+  "main": "server.js",
+  "author": "Tejas Rana <contact@tejasrana.in> (https://tejasrana.in/)",
+  "license": "MIT",
+  "scripts": {
+    "start:server": "babel-node server",
+    "start:ui": "webpack",
+    "build": "",
+    "server": "babel-node server/server",
+    "start": "npm run build && npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Tony3898/server-render-react-express.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "server.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/Tony3898/server-render-react-express/issues"
+  },
+  "homepage": "https://github.com/Tony3898/server-render-react-express",
+  "keywords": [
+    "server-render-react-express"
+  ],
+  "dependencies": {
+    "@tony3898/mongodb": "^1.1.7",
+    "@tony3898/users": "^1.1.5",
+    "@tony3898/xserver": "^1.0.3",
+    "@tony3898/style": "^1.3.1",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
