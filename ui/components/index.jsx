@@ -1,6 +1,7 @@
-import React from 'react';
-import ReactDom from 'react-dom'
+import Project from "./project";
+import Tool from "./tool";
 
-const App = () => (<div>SSReact</div>)
-
-ReactDom.render(<App/>, document.getElementById('app'))
+module.export = {
+  Project,
+  Tool
+}

@@ -7,9 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start:server": "babel-node server",
-    "start:ui": "webpack",
-    "build": "",
-    "server": "babel-node server/server",
+    "start:ui": "webpack-dev-server",
+    "build": "webpack",
     "start": "npm run build && npm run server"
   },
   "repository": {
@@ -34,9 +33,9 @@
   ],
   "dependencies": {
     "@tony3898/mongodb": "^1.1.7",
+    "@tony3898/style": "^1.3.1",
     "@tony3898/users": "^1.1.5",
     "@tony3898/xserver": "^1.0.3",
-    "@tony3898/style": "^1.3.1",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "react": "^16.12.0",
@@ -47,9 +46,14 @@
     "@babel/node": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
+    "autoprefixer": "^10.0.1",
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.10.1",
+    "html-webpack-plugin": "^4.5.0",
+    "autoprefix": "^1.0.1",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-dev-middleware": "^4.0.0"
   }
 }

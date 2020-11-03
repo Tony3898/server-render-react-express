@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js install
+  /usr/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js add html-webpack-plugin --dev
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,8 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: getaddrinfo EAI_AGAIN npm.tik.co npm.tik.co:80
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+  Error: ENOENT: no such file or directory, copyfile '/home/tony/.cache/yarn/v6/npm-he-1.2.0-84ae65fa7eafb165fddb61566ae14baf05664f0f-integrity/node_modules/he/README.md' -> '/home/tony/Documents/playzone/courses/pluralsight/server-render-react-express/node_modules/he/README.md'
 
 npm manifest: 
   {
@@ -26,16 +25,10 @@ npm manifest:
     "author": "Tejas Rana <contact@tejasrana.in> (https://tejasrana.in/)",
     "license": "MIT",
     "scripts": {
-      "start:server": "node server",
-      "start:ui": "cd ui && npm start",
-      "build": "webpack -p",
-      "deploy": "npm run build && git commit -a -m deployment && git push heroku master",
-      "dev": "webpack-dev-server --open",
-      "server": "cross-env NODE_ENV=production babel-node src/server",
-      "server-dev": "nodemon src/server --exec babel-node src/server",
-      "start-dev": "concurrently \"npm run server-dev\" \"npm run dev\"",
-      "server-spec": "babel-node src/server/server.spec",
-      "start": "npm run server"
+      "start:server": "babel-node server",
+      "start:ui": "webpack-dev-server",
+      "build": "",
+      "start": "npm run build && npm run server"
     },
     "repository": {
       "type": "git",
@@ -75,8 +68,7 @@ npm manifest:
       "babel-loader": "^8.0.6",
       "webpack": "^4.41.5",
       "webpack-cli": "^3.3.10",
-      "webpack-dev-server": "^3.10.1",
-      "concurrently": "^4.0.1"
+      "webpack-dev-server": "^3.10.1"
     }
   }
 

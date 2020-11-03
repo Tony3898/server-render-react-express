@@ -8,8 +8,6 @@ app.set('views', [app.get('views'), path.join(__dirname, "views/partials")]);
 
 app.use('/dist', express.static(path.join(__dirname, "/dist")));
 
-app.get('/test/project/react', ((req, res, next) => {
+app.get("/test/project/home",(req, res, next) => {
   res.render('react.hbs')
-})).get('/test/project/vue', ((req, res, next) => {
-  res.render('vue.hbs')
-}))
+})

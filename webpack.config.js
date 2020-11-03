@@ -1,13 +1,20 @@
+const {resolve} = require('path');
+
 module.exports = {
   mode: "development",
-  entry: "./ui/components/index.jsx",
+  entry: resolve(__dirname, 'ui', 'components'),
   output: {
-    filename: '[name].js'
+    path: resolve(__dirname, 'dist'),
+    filename: "main.js",
+    publicPath: "/"
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  /** can module be omitted for a simple project? No, it cannot. */
+  devServer: {
+    historyApiFallback: true,
+    hot: true
+  },
   module: {
     rules: [
       {
