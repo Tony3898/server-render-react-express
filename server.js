@@ -1,5 +1,4 @@
-import express from "express";
-
+const express = require("express")
 let app = require("@tony3898/xserver")
 require("./src/index")
 const path = require('path')
