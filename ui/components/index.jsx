@@ -1,6 +1,8 @@
 import React from 'react';
-import ReactDom from 'react-dom'
+import ReactDOM from 'react-dom';
+import Main from "./main";
 
-const App = () => (<div>SSReact</div>)
-
-ReactDom.render(<App/>, document.getElementById('app'))
+ReactDOM.render(
+    <Main/>,
+    document.getElementById("app")
+);
