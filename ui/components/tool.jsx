@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 
+
 class Tool extends Component {
 
   constructor(props) {
@@ -8,12 +9,14 @@ class Tool extends Component {
   }
 
   componentDidMount() {
-    console.log('pro')
+    console.log('tool')
     //axios.get('api/auth.getLoggedInUserData').then(r=>console.log(r)).catch(e=>console.log(e.message))
   }
 
   render() {
-    return (<h1>Tool SSRs</h1>)
+    return (<div>
+      <h1>Tool SSRs</h1>
+    </div>)
   }
 }
 
